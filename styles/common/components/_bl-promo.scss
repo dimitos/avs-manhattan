@@ -1,0 +1,30 @@
+@import "../setup/initialize";
+
+.block-promo .section__top {
+    margin-bottom: 21px;
+    @include to-mobile {
+        margin-bottom: 35px;
+    }
+    @include to-desktop {
+        margin-bottom: 48px;
+    }
+}
+.block-promo__link .link-page__icon {
+    width: 20px;
+    height: 16px;
+}
+.block-promo__link .link-page__text {
+    display: none;
+    @include to-desktop {
+        display: block;
+        text-transform: uppercase;
+    }
+}
+.block-promo__link .link-page:hover .link-page__text {
+    margin-left: 18px;
+}
+.block-promo__link .link-page:hover .link-page__icon {
+    top: 50%;
+    left: 50%;
+    fill: url(#linear-arrow-right);
+}

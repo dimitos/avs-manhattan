@@ -1,0 +1,9 @@
+.logo__text {
+    .logo_text-hidden & {
+        display: none;
+    }
+}
+.logo__text-caption,
+.logo__text-name {
+    fill: var(--black);
+}

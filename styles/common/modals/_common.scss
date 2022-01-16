@@ -1,0 +1,26 @@
+.modal__title {
+    margin-bottom: 24px;
+    font-size: var(--font-size-large);
+    @include to-desktop {
+        margin-bottom: 33px;
+        font-size: var(--font-size-large-maxi);
+    }
+}
+.modal {
+    position: relative;
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.modal__content {
+    padding: 30px 16px 25px;
+    margin: 0 auto;
+    background: var(--white);
+    @include to-mobile {
+        padding: 30px 20px;
+    }
+    @include to-desktop {
+        padding: 48px 64px;
+        margin: 0;
+    }
+}

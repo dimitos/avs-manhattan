@@ -1,0 +1,33 @@
+.breadcrumbs {
+    min-height: 20px;
+    @include to-desktop {
+        padding: 40px 0;
+        line-height: 170%;
+    }
+}
+.breadcrumbs__list {
+    display: none;
+    @include to-desktop {
+        display: flex;
+    }
+}
+.breadcrumbs__text {
+    opacity: .5;
+}
+.breadcrumbs__link {
+    position: relative;
+    padding-right: 13px;
+    margin-right: 12px;
+}
+.breadcrumbs__link:hover {
+    color: var(--color1);
+}
+.breadcrumbs__link::before {
+    position: absolute;
+    content: "";
+    top: 7px;
+    right: 0;
+    width: 1px;
+    height: 12px;
+    background: var(--black);
+}

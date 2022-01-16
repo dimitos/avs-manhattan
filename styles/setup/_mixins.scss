@@ -1,0 +1,39 @@
+@mixin to-width($max-width) {
+    @media (max-width: $max-width) {
+        @content;
+    }
+}
+@mixin from-width($min-width) {
+    @if $min-width == 0 {
+        @content;
+    } @else {
+        @media (min-width: $min-width) {
+            @content;
+        }
+    }
+}
+@mixin to-mobile {
+    @media (min-width: $mobile-width) {
+        @content;
+    }
+}
+@mixin from-mobile {
+    @media (min-width: $mobile-semi-width) {
+        @content;
+    }
+}
+@mixin to-desktop {
+    @media (min-width: $mobile-max-width) {
+        @content;
+    }
+}
+@mixin from-desktop {
+    @media (min-width: $desktop-min-width) {
+        @content;
+    }
+}
+@mixin to-retina {
+    @media (min-width: $desktop-max-width) {
+        @content;
+    }
+}

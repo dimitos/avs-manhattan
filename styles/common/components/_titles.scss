@@ -1,0 +1,51 @@
+.title {
+    font-weight: var(--font-weight-semi-bold);
+}
+.title__banner {
+    font-size: var(--font-size-large-maxi);
+    line-height: 130%;
+    color: var(--white);
+    &_hero {
+        margin-bottom: 16px;
+    }
+    @include to-mobile {
+        font-size: 38px;
+    }
+    @include to-desktop {
+        font-size: 50px;
+        &_hero {
+            margin-bottom: 24px;
+        }
+    }
+    @include from-desktop {
+        font-size: var(--font-size-giant);
+    }
+}
+.title__section {
+    font-size: var(--font-size-large);
+    color: var(--black);
+    @include to-desktop {
+        font-size: var(--font-size-large-maxi);
+        line-height: 54px;
+    }
+    @include from-desktop {
+        font-size: var(--font-size-huge);
+    }
+}
+.title__card {
+    font-size: var(--font-size-large-mini);
+    color: var(--white);
+    @include to-desktop {
+        font-size: var(--font-size-large-semi);
+    }
+    @include from-desktop {
+        font-size: var(--font-size-large);
+    }
+}
+.title__modal {
+    font-size: var(--font-size-large);
+    color: var(--white);
+    @include to-desktop {
+        font-size: var(--font-size-large-maxi);
+    }
+}

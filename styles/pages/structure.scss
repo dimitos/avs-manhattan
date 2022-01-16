@@ -1,0 +1,10 @@
+@import "../setup/initialize";
+@import "./structure/bl-structure";
+@import "../common/components/bl-promo";
+
+.bl-structure__title {
+    margin-bottom: 24px;
+    @include to-desktop {
+        margin-bottom: 40px;
+    }
+}

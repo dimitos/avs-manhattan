@@ -1,0 +1,54 @@
+// .intopModal-privacy .intopModal__whiteContent, .intopModal-alert .intopModal__whiteContent {
+//     width: 392px;
+//     @include to-mobile {
+//         width: calc(100vw - 20px);
+//         max-width: 650px;
+//     }
+//     @include to-desktop {
+//         max-width: none;
+//         width: 740px;
+//     }
+// }
+// .intopModal-privacy .modal__inner, .intopModal-alert .modal__inner {
+//     display: block;
+//     padding: 30px 10px;
+//     @include to-mobile {
+//         padding: 30px 20px;
+//     }
+//     @include to-desktop {
+//         padding: 40px 30px;
+//     }
+// }
+.intopModal-privacy .modal__content {
+    max-width: 1040px;
+}
+.intopModal-privacy .modal-title {
+    text-align: center;
+}
+.privacy__text {
+    text-indent: 30px;
+    text-align: justify;
+
+    & + & {
+        margin-top: 10px;
+    }
+}
+.privacy__list {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+.privacy__list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+.privacy__list li::before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background: var(--black);
+    border-radius: 50%;
+}

@@ -1,0 +1,119 @@
+.bl-offer__title {
+    margin-bottom: 12px;
+    @include to-desktop {
+        margin-bottom: 78px;
+    }
+}
+.offer__content {
+    @include to-desktop {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+.offer__top {
+    @include to-desktop {
+        max-width: 648px;
+        flex: 1;
+    }
+}
+.offer__top-item {
+    position: relative;
+    padding: 20px 8px 20px 28px;
+    border-bottom: 1px solid var(--black-light);
+    @include to-desktop {
+        padding: 40px 0 40px 28px;
+    }
+}
+.offer__top-item:first-child {
+    @include to-desktop {
+        padding-top: 0;
+    }
+}
+.offer__top-item:last-child {
+    border-bottom: none;
+    @include to-desktop {
+        border-bottom: 1px solid var(--black-light);
+    }
+}
+.offer__top-item::before {
+    position: absolute;
+    content: "";
+    top: 25px;
+    left: 4px;
+    width: 6px;
+    height: 10px;
+    border-bottom: 2px solid var(--black);
+    border-right: 2px solid var(--black);
+    transform: rotate(45deg);
+    @include to-desktop {
+        top: 44px;
+    }
+}
+.offer__top-item:first-child::before {
+    @include to-desktop {
+        top: 5px;
+    }
+}
+.offer__bottom {
+    margin-top: 20px;
+    @include to-desktop {
+        margin-top: 0;
+    }
+}
+.offer__wr {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background: var(--color2);
+    @include to-desktop {
+        align-items: flex-start;
+        padding: 0 70px 0 0;
+        flex-direction: column;
+        background: transparent;
+    }
+}
+.offer__item {
+    position: relative;
+    padding-right: 52px;
+    color: var(--white);
+    @include to-desktop {
+        padding-right: 0;
+        margin-bottom: 32px;
+        color: var(--black);
+    }
+}
+.offer__item:last-child {
+    padding-right: 0;
+}
+.offer__name {
+    font-size: var(--font-size-large-mini);
+    margin-bottom: 4px;
+}
+.offer__value {
+    font-size: var(--font-size-large-maxi);
+    font-weight: var(--font-weight-semi-bold);
+}
+.offer__item::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 25px;
+    height: 80%;
+    width: 1px;
+    transform: translateY(-50%);
+    border-right: 1px solid var(--white);
+    @include to-desktop {
+        border-right: none;
+    }
+}
+.offer__item:last-child::before {
+    border-right: none;
+}
+.offer.swiper {
+    overflow: initial;
+}
+.offer .swiper-slide {
+    width: auto;
+}
+

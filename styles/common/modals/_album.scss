@@ -1,0 +1,83 @@
+.intopModal-album {
+    width: 300px;
+    height: 70vw;
+    @include to-mobile {
+        width: 95vw;
+    }
+    @include to-desktop {
+        width: 87.7vw;
+        height: 61vw;
+    }
+    @include from-desktop {
+        width: 1040px;
+        height: 671px;
+    }
+}
+.modal__slider {
+    height: 100%;
+    position: relative;
+}
+.modal__album {
+    position: relative;
+    height: 100%;
+}
+.modal__album-swiper {
+    height: 100%;
+}
+.modal__album .slider-nav {
+    display: none;
+    @include to-desktop {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 110%;
+        height: 35px;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        justify-content: space-between;
+        pointer-events: none;
+    }
+}
+.modal__album .slider-nav__btn  {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    pointer-events: initial;
+}
+.modal__album .link-page__icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--white-light);
+    transition: all .3s ease;
+}
+.modal__album .slider-nav__btn:hover .link-page__icon {
+    fill: var(--white);
+}
+.modal__album .slider-pagination {
+    position: absolute;
+    z-index: 5;
+    bottom: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    pointer-events: none;
+    @include to-desktop {
+        display: none;
+    }
+}
+.modal__album .swiper-pagination-bullet {
+    background: var(--white);
+    opacity: .5;
+    transition: all .3s ease;
+    pointer-events: initial;
+}
+.modal__album .swiper-pagination-bullet:hover {
+    opacity: .8;
+}
+.modal__album .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+.modal__album .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 12px;
+}

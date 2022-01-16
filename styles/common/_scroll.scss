@@ -1,0 +1,24 @@
+::-webkit-scrollbar {
+    background-color: var(--white);
+    height: 5px;
+    width: 5px;
+    border-radius: 5px;
+    @include to-desktop {
+        height: 8px;
+        width: 8px;
+        border-radius: 8px;
+    }
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--color3);
+    @include to-desktop {
+        border-radius: 8px;
+    }
+}
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    @include to-desktop {
+        border-radius: 8px;
+    }
+}

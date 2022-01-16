@@ -1,0 +1,77 @@
+@import "../setup/initialize";
+
+.bl-promotions__title {
+    margin-bottom: 24px;
+    @include to-desktop {
+        margin-bottom: 40px;
+    }
+}
+.promo__pane {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -7px -16px;
+    @include from-mobile {
+        margin: 0 -7px -24px;
+    }
+    @include from-desktop {
+        margin: 0 -12px -32px;
+    }
+}
+.promo__item {
+    width: 100%;
+    padding: 0 7px;
+    margin-bottom: 16px;
+    @include from-mobile {
+        width: 50%;
+        margin-bottom: 24px;
+    }
+    @include to-desktop {
+        width: calc(100% / 3);
+    }
+    @include from-desktop {
+        padding: 0 12px;
+        margin-bottom: 32px;
+    }
+}
+.promo__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px 16px;
+    border: 1px solid var(--black);
+    transition: all .3s ease;
+    @include from-desktop {
+        padding: 24px 16px;
+        width: auto;
+    }
+}
+.promo__wrapper:hover {
+    @include to-desktop {
+        border: 1px solid var(--color1);
+    }
+}
+.promo__link {
+    height: 100%;
+}
+.promo__date {
+    font-size: var(--font-size-medium-mini);
+    font-weight: var(--font-weight-semi-bold);
+    opacity: .4;
+}
+.promo__text {
+    margin-bottom: 24px;
+    flex: 1;
+    @include from-desktop {
+        font-size: var(--font-size-large-mini);
+        margin-bottom: 43px;
+    }
+}
+.promo__title {
+    margin-bottom: 16px;
+    transition: all .3s ease;
+}
+.bl-promotions .promo__wrapper:hover .promo__title {
+    @include to-desktop {
+        color: var(--color1);
+    }
+}

@@ -1,0 +1,193 @@
+.bl-object .section__top {
+    justify-content: flex-start;
+    margin-bottom: 24px;
+    @include to-mobile {
+        margin-bottom: 35px;
+    }
+    @include to-desktop {
+        margin-bottom: 48px;
+    }
+}
+.bl-object__return .icon__arrow-left-short {
+    width: 20px;
+    height: 23px;
+    margin-right: 24px;
+    fill: var(--black);
+    transition: all .3s ease;
+    @include to-desktop {
+        display: none;
+    }
+}
+.bl-object__wrapper {
+    @include to-desktop {
+        display: flex;
+    }
+}
+.bl-object__left {
+    @include to-desktop {
+        width: 52%;
+    }
+}
+.bl-object__right {
+    @include to-desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 48%;
+        padding-left: 30px;
+    }
+    @include from-desktop {
+        padding-left: 54px;
+    }
+}
+.bl-object__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    @include from-desktop {
+        padding: 16px 0;
+    }
+    & + & {
+        border-top: 1px solid var(--black-light);
+    }
+}
+.bl-object__item:first-child {
+    padding-top: 0;
+}
+.bl-object__item:last-child {
+    padding-bottom: 0;
+}
+.bl-object__wrap {
+    margin-bottom: 32px;
+    @include from-desktop {
+        margin-bottom: 48px;
+    }
+}
+.bl-object__title {
+    font-size: var(--font-size-medium-maxi);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    @include from-desktop {
+        margin-bottom: 40px;
+    }
+}
+.bl-object__right-bottom {
+    @include from-desktop {
+        display: flex;
+        align-items: center;
+    }
+}
+.bl-object__right-bottom .btn__default {
+    width: 100%;
+    @include to-mobile {
+        width: auto;
+    }
+}
+.bl-object .card-link {
+    width: 135px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    @include to-mobile {
+        margin-top: 32px;
+        margin-left: initial;
+        margin-right: initial;
+        text-align: left;
+    }
+    @include from-desktop {
+        margin-left: 70px;
+        margin-top: 0;
+        text-align: center;
+    }
+}
+.bl-object .card-link div {
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0;
+    text-transform: uppercase;
+    background: linear-gradient(251.97deg, #02c4f8 -9%, #1b5c9f 86.52%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all .3s ease;
+}
+.bl-object .card-link:hover div {
+    @include to-desktop {
+        letter-spacing: 0.8px;
+    }
+}
+.object-swiper .slide,
+.object-swiper-mini .slide {
+    position: relative;
+}
+.object {
+    position: relative;
+    @include from-mobile {
+        margin-bottom: 16px;
+    }
+    @include to-desktop {
+        margin-bottom: 32px;
+    }
+}
+.bl-object__left {
+    margin-bottom: 68px;
+    @include to-desktop {
+        margin-bottom: 0;
+    }
+}
+.object-swiper .slide {
+    height: 66vw;
+    min-height: 207px;
+    @include from-mobile {
+        height: 50vw;
+    }
+    @include to-desktop {
+        height: 34vw;
+    }
+    @include from-desktop {
+        height: 397px;
+    }
+}
+.object-swiper-mini .slide {
+    @include from-mobile {
+        height: 121px;
+    }
+    @include to-desktop {
+        height: 10vw;
+    }
+    @include from-desktop {
+        height: 121px;
+    }
+}
+.object-swiper-mini {
+    display: none;
+    @include from-mobile {
+        display: block;
+    }
+}
+.object .slider-pagination {
+    @include from-mobile {
+        display: none;
+    }
+}
+.object .slider-pagination {
+    position: absolute;
+    z-index: 5;
+    bottom: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    pointer-events: none;
+}
+.object .swiper-pagination-bullet {
+    background: var(--black);
+    opacity: .5;
+    transition: all .3s ease;
+    pointer-events: initial;
+}
+.object .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+.object .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 12px;
+}

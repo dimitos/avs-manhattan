@@ -1,0 +1,17 @@
+.social__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social__link {
+    display: flex !important;
+}
+.social__link-icon {
+    width: 16px;
+    height: 16px;
+    transition: all .3s ease;
+}
+.social__item:hover .link-social__icon {
+    width: 16px;
+    height: 16px;
+}

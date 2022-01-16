@@ -1,0 +1,28 @@
+@import "../setup/initialize";
+
+.bl-album .section__top {
+    justify-content: flex-start;
+    margin-bottom: 24px;
+    @include to-mobile {
+        margin-bottom: 35px;
+    }
+    @include to-desktop {
+        margin-bottom: 48px;
+    }
+}
+.bl-album__return .icon__arrow-left-short {
+    width: 20px;
+    height: 23px;
+    margin-right: 24px;
+    fill: var(--black);
+    transition: all .3s ease;
+}
+.bl-album__return .icon__arrow-left:hover {
+    fill: var(--color1);
+}
+.bl-album .card__overlay {
+    display: block;
+}
+.bl-album .card__wrapper:hover .image{
+    transform: none;
+}

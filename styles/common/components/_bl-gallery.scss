@@ -1,0 +1,49 @@
+@import "../setup/initialize";
+
+.block-gallery .section__top {
+    margin-bottom: 24px;
+    @include to-mobile {
+        margin-bottom: 35px;
+    }
+    @include to-desktop {
+        margin-bottom: 48px;
+    }
+}
+.block-gallery__link .link-page__icon {
+    width: 20px;
+    height: 16px;
+}
+.block-gallery__link .link-page__text {
+    display: none;
+    @include to-desktop {
+        text-transform: uppercase;
+        display: block;
+    }
+}
+.block-gallery__link .link-page:hover .link-page__text {
+    margin-left: 18px;
+}
+.block-gallery__link .link-page:hover .link-page__icon {
+    top: 50%;
+    left: 50%;
+    fill: url(#linear-arrow-right);
+}
+.block-gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.block-gallery__item {
+    position: relative;
+    width: 50%;
+    height: 50vw;
+    @include to-mobile {
+        height: 38vw;
+    }
+    @include to-desktop {
+        width: 25%;
+        height: 25vw;
+    }
+    @include to-retina {
+        height: 480px;
+    }
+}

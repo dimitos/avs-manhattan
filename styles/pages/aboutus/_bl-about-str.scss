@@ -1,0 +1,199 @@
+.bl-about-str .section__top {
+    margin-bottom: 24px;
+    @include to-mobile {
+        margin-bottom: 35px;
+    }
+    @include to-desktop {
+        margin-bottom: 48px;
+    }
+}
+.bl-about-str .container {
+    overflow: hidden;
+}
+.bl-about-str__link .link-page__icon {
+    width: 20px;
+    height: 16px;
+}
+.bl-about-str__link .link-page__text {
+    display: none;
+    @include to-desktop {
+        text-transform: uppercase;
+        display: block;
+    }
+}
+.bl-about-str__link .link-page:hover .link-page__text {
+    margin-left: 18px;
+}
+.bl-about-str__link .link-page:hover .link-page__icon {
+    top: 50%;
+    left: 50%;
+    fill: url(#linear-arrow-right);
+}
+.about-str__list {
+    @include from-mobile {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        border-left: 1px solid var(--black-light);
+        border-top: 1px solid var(--black-light);
+    }
+}
+.about-str__list::before {
+    @include from-mobile {
+        position: absolute;
+        content: "";
+        top: -1px;
+        left: -1px;
+        background: var(--white);
+        width: calc(50% * 39.6 / 200);
+        height: calc(130px * 32 / 200);
+    }
+    @include to-desktop {
+        width: calc((100% / 3) * 39.6 / 200);
+        height: calc(160px * 32 / 200);
+    }
+    @include from-desktop {
+        width: calc(25% * 39.5 / 200);
+        height: calc(192px * 32 / 200);
+    }
+}
+.about-str__item {
+    position: relative;
+    height: 38px;
+    width: 100%;
+    margin-bottom: 16px;
+    border: 1px solid var(--color1);
+    @include from-mobile {
+        width: 50%;
+        height: 130px;
+        margin-bottom: 0;
+        border: none;
+    }
+    @include to-desktop {
+        height: 160px;
+        width: calc(100% / 3);
+    }
+    @include from-desktop {
+        height: 192px;
+        width: 25%;
+    }
+}
+.about-str__item::before {
+    @include from-mobile {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 68%;
+        background: var(--black-light);
+    }
+}
+.about-str__item::after {
+    @include from-mobile {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60.4%;
+        height: 1px;
+        background: var(--black-light);
+    }
+}
+.about-str__item-wr {
+    position: absolute;
+    z-index: 3;
+    width: calc(100% + 1px);
+    height: calc(100% + 1px);
+    top: -1px;
+    left: -1px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.about-str__item:hover .about-str__item-wr {
+    @include to-desktop {
+        background: var(--color2);
+    }
+}
+.about-str__item:hover::before,
+.about-str__item:hover::after {
+    @include to-desktop {
+        background: transparent;
+    }
+}
+.about-str__item-inner {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+.corners {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.corners::before {
+    @include from-mobile {
+        position: absolute;
+        content: "";
+        top: -3px;
+        right: 0;
+        transform: translateX(50%);
+        width: 39.6%;
+        height: 5px;
+        background: var(--white);
+    }
+}
+.corners::after {
+    @include from-mobile {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: -3px;
+        transform: translateY(50%);
+        width: 5px;
+        height: 32%;
+        background: var(--white);
+    }
+}
+.about-str__item-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    @include from-mobile {
+        flex-direction: column;
+    }
+}
+.about-str__item-link .link-page__icon {
+    position: initial;
+    width: 20px;
+    height: 20px;
+    margin-left: 6px;
+    fill: var(--black);
+    transform: none;
+    transition: all .3s ease;
+    @include from-mobile {
+        width: 32px;
+        height: 32px;
+        margin-left: 0;
+        margin-bottom: 8px;
+    }
+}
+.about-str__item:hover .about-str__item-link .link-page__icon {
+    @include to-desktop {
+        fill: var(--white);
+    }
+}
+.about-str__item-title {
+    transition: all .3s ease;
+}
+.about-str__item:hover .about-str__item-title {
+    @include to-desktop {
+        color: var(--white);
+    }
+}

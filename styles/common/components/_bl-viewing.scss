@@ -1,0 +1,107 @@
+.section__viewing {
+    position: relative;
+    background: var(--color2);
+    @include to-mobile {
+        padding: 65px 0;
+        background: transparent;
+    }
+    @include to-desktop {
+        padding: 92px 0;
+        min-height: 540px;
+    }
+}
+.section__viewing .image {
+    display: none;
+    @include to-mobile {
+        display: block;
+    }
+}
+.viewing {
+    position: relative;
+    max-width: 608px;
+    padding: 20px 0;
+    background: var(--color2);
+    margin: 0 auto;
+    @include to-mobile {
+        padding: 30px 20px;
+        background: var(--white);
+    }
+    @include to-desktop {
+        padding: 48px 64px;
+        margin: 0;
+    }
+}
+.viewing__title {
+    margin-bottom: 24px;
+    font-size: var(--font-size-large);
+    color: var(--white);
+    @include to-mobile {
+        color: var(--black);
+    }
+    @include to-desktop {
+        margin-bottom: 33px;
+        font-size: var(--font-size-large-maxi);
+    }
+}
+.viewing ::placeholder {
+    color: var(--white);
+    @include to-mobile {
+        color: var(--black);
+    }
+}
+.viewing .request__input {
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+    @include to-mobile {
+        border-bottom: 1px solid var(--black);
+        color: var(--black);
+    }
+}
+.viewing .btn__default_black-black {
+    width: 100%;
+    border-color: var(--white);
+    @include to-mobile {
+        width: auto;
+        border-color: var(--black);
+    }
+}
+.viewing .btn__default_black-black .btn__text {
+    color: var(--white);
+    @include to-mobile {
+        color: var(--black);
+    }
+}
+.viewing .btn__default_black-black:hover {
+    border-color: var(--color1);
+}
+.viewing .request__agreement {
+    color: var(--white);
+    opacity: .5;
+    @include to-mobile {
+        color: var(--black);
+        opacity: 1;
+    }
+}
+.viewing .request__agreement::before {
+    border: 1px solid var(--white-light);
+    @include to-mobile {
+        border: 1px solid rgba(15, 25, 29, .1);
+    }
+}
+.viewing .request__checkbox:checked + .request__agreement::before {
+    border: 1px solid var(--white-light);
+    @include to-mobile {
+        border: 1px solid rgb(184, 232, 250, .1);
+    }
+}
+.viewing .request__checkbox:checked + .request__agreement {
+    opacity: 1;
+}
+.viewing .request__agreement::after {
+    border-bottom: 2px solid var(--white);
+    border-left: 2px solid var(--white);
+    @include to-mobile {
+        border-bottom: 2px solid var(--color2);
+        border-left: 2px solid var(--color2);
+    }
+}

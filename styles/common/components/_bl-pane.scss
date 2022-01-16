@@ -1,0 +1,46 @@
+.bl-pane__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 -20px;
+    @include to-desktop {
+        margin: 0 -7px -20px;
+    }
+    @include from-desktop {
+        margin: 0 -12px -32px;
+    }
+}
+.bl-pane__item {
+    width: 100%;
+    margin-bottom: 15px;
+    @include to-desktop {
+        width: 50%;
+        padding: 0 7px;
+        margin-bottom: 20px;
+    }
+    @include from-desktop {
+        padding: 0 12px;
+        margin-bottom: 32px;
+    }
+}
+.bl-pane .card__footer-item {
+    @include to-desktop {
+        padding: 0 12px;
+    }
+}
+.bl-pane .card__footer-name {
+    @include to-desktop {
+        margin-bottom: 3px;
+        font-size: var(--font-size-small-maxi);
+    }
+    @include from-desktop {
+        font-size: var(--font-size-medium-mini);
+    }
+}
+.bl-pane .card__footer-value {
+    @include to-desktop {
+        font-size: var(--font-size-medium-mini)
+    }
+    @include from-desktop {
+        font-size: var(--font-size-large-mini);
+    }
+}

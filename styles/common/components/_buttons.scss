@@ -1,0 +1,95 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.btn__default {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    text-align: center;
+}
+.btn__default:visited {
+    opacity: .5;
+}
+.btn__text {
+    transition: all .3s ease;
+}
+.btn__default_main {
+    padding: 12px 20px;
+}
+// ---------------------------------
+.btn__default_black-black {
+    border-color: var(--black);
+}
+.btn__default_black-black:hover {
+    border-color: var(--color1);
+}
+// ---------------------------------
+.btn__default_main-white {
+    border-color: var(--color1);
+}
+.btn__default_main-white .btn__text {
+    color: var(--white);
+}
+.btn__default_main-white:hover {
+    background: var(--color2);
+    border-color: var(--color2);
+}
+// ---------------------------------
+.btn__default_main-black {
+    border-color: var(--color1);
+}
+.btn__default_main-black:hover {
+    background: var(--color2);
+    border-color: var(--color2);
+}
+.btn__default_main-black:hover .btn__text {
+    color: var(--white);
+}
+.btn__default_main-white.btn__default_main:hover,
+.btn__default_main-black.btn__default_main:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+// ---------------------------------
+.btn__default_filter {
+    padding: 8px 12px;
+    border-color: var(--black);
+}
+.btn__icon {
+    margin-left: 6px;
+    width: 20px;
+    height: 20px;
+    transition: all .3s ease;
+}
+.btn__default_filter .btn__icon {
+    fill: var(--black);
+}
+.btn__default_filter:hover {
+    @include to-desktop {
+        border-color: var(--color2);
+        background: var(--color2);
+    }
+}
+.btn__default_filter.selected {
+    border-color: var(--color2);
+    background: var(--color2);
+}
+.btn__default_filter:hover .btn__icon {
+    @include to-desktop {
+        fill: var(--white);
+    }
+}
+.btn__default_filter.selected .btn__icon {
+    fill: var(--white);
+}
+.btn__default_filter:hover .btn__text {
+    @include to-desktop {
+        color: var(--white);
+    }
+}
+.btn__default_filter.selected .btn__text {
+    color: var(--white);
+}

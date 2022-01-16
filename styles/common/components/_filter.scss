@@ -1,0 +1,24 @@
+.filter {
+    margin-bottom: 24px;
+    @include to-desktop {
+        margin-bottom:36px;
+    }
+}
+.filter .swiper-wrapper {
+    flex-wrap: nowrap;
+    margin-bottom: -20px;
+    @include from-desktop {
+        flex-wrap: wrap;
+    }
+
+}
+.filter .swiper-slide {
+    width: auto;
+    margin-bottom: 20px;
+}
+.filter .swiper-slide + .swiper-slide {
+    margin-right: 16px;
+}
+.filter .swiper-slide:first-child {
+    margin-right: 16px;
+}

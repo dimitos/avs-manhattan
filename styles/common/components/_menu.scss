@@ -1,0 +1,214 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 996px;
+    z-index: 1000;
+    overflow: hidden;
+    pointer-events: none;
+}
+.menu.open .menu__inner{
+    transform: translateX(0);
+}
+.menu__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 60px 6px 24px 16px;
+    color: var(--white);
+    background: var(--color2);
+    transform: translateX(-105%);
+    pointer-events: auto;
+    transition: all .5s ease-in-out;
+    @include to-desktop {
+        padding: 72px 40px 72px 156px;
+    }
+}
+.menu__content {
+    overflow: auto;
+}
+.menu__list {
+    margin-bottom: 16px;
+    padding-right: 10px;
+    @include to-mobile {
+        margin-bottom: 30px;
+    }
+    @include to-desktop {
+        padding-right: 30px;
+        margin-bottom: 55px;
+    }
+    @include from-desktop {
+        margin-bottom: 80px;
+    }
+}
+.menu__item {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 0;
+    & + & {
+        border-top: 1px solid var(--white-light);
+    }
+    @include to-desktop {
+        padding: 16px 0;
+    }
+}
+.menu__item-link {
+    position: relative;
+    display: inline-block;
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-normal);
+    text-align: right;
+    width: 100%;
+    max-width: 520px;
+    @include to-mobile {
+        font-size: var(--font-size-large-maxi);
+    }
+    @include to-desktop {
+        font-size: var(--font-size-huge);
+        font-weight: var(--font-weight-semi-bold);
+    }
+}
+.menu__item-link:hover {
+    @include to-desktop {
+        margin-right: 32px;
+        color: var(--color1);
+    }
+}
+.menu__item-link:before {
+    @include to-desktop {
+        position: absolute;
+        content: "";
+        bottom: -18px;
+        right: 0;
+        width: 0;
+        height: 3px;
+        background-color: var(--color1);
+        transition: all .4s ease;
+    }
+}
+.menu__item-link:hover:before {
+    @include to-desktop {
+        width: 100%;
+    }
+}
+.menu__item:last-child .menu__item-link:hover:before {
+    @include to-desktop {
+        width: 0;
+    }
+}
+.menu-closer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    @include to-desktop {
+        top: 27px;
+        left: 74px;
+        right: auto;
+    }
+    &:hover .menu-closer__icon {
+        @include to-desktop {
+            fill: var(--white);
+            transform-origin: center center;
+            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+    }
+}
+.menu-closer__icon {
+    width: 21px;
+    height: 21px;
+    fill: var(--white);
+    transition: all .3s ease;
+    pointer-events: none;
+    @include to-desktop {
+        fill: var(--white-light);
+    }
+}
+.menu__wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-right: 10px;
+    @include to-desktop {
+        padding-right: 30px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.menu__social {
+    width: 100px;
+}
+.menu__social .social__link-icon {
+    fill: var(--white-light);
+}
+.menu__social .social__item:hover .social__link-icon {
+    @include to-desktop {
+        fill: var(--white);
+    }
+}
+.menu__contacts {
+    @include from-desktop {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 65%;
+        max-width: 487px;
+        margin-right: 20%;
+    }
+}
+.menu__contacts-item {
+    display: flex;
+    align-items: center;
+}
+.menu__contacts-item:first-child {
+    margin-bottom: 12px;
+    @include from-desktop {
+        margin-bottom: 0;
+    }
+}
+.menu__contacts-link {
+    font-weight: var(--font-weight-bold);
+    transition: all .3s ease;
+}
+.menu__contacts-item:first-child .menu__contacts-link:hover {
+    @include to-desktop {
+        color: var(--color1);
+    }
+}
+.menu__contacts-name {
+    display: none;
+    @include to-desktop {
+        display: block;
+        margin-right: 24px;
+    }
+}
+.menu__contacts-phone {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    @include to-desktop {
+        display: none;
+    }
+}
+.menu__contacts-phone .icon__menu-phone {
+    fill: var(--white);
+    width: 23px;
+    height: 23px
+}
+.menu__contacts-phone .link-page__round {
+    border: 1px solid var(--white);
+}
+.menu__contacts-phone.link-page:hover .link-page__icon {
+    top: 50%;
+    left: 50%;
+}

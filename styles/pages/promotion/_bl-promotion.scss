@@ -1,0 +1,96 @@
+.bl-promotion .section__top {
+    justify-content: flex-start;
+    margin-bottom: 24px;
+    @include to-mobile {
+        margin-bottom: 35px;
+    }
+    @include to-desktop {
+        margin-bottom: 48px;
+    }
+}
+.bl-promotion__return .icon__arrow-left-short {
+    width: 20px;
+    height: 23px;
+    margin-right: 24px;
+    fill: var(--black);
+    transition: all .3s ease;
+    @include to-desktop {
+        display: none;
+    }
+}
+.bl-promotion__wrapper {
+    @include to-desktop {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.bl-promotion__right {
+    display: none;
+    @include to-desktop {
+        display: block;
+        padding-left: 5%;
+    }
+    @include from-desktop {
+        padding-left: 96px;
+    }
+}
+.bl-promotion__data {
+    display: flex;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+    align-items: center;
+    border-bottom: 1px solid var(--black-light);
+    @include to-desktop {
+        padding-bottom: 24px;
+    }
+}
+.bl-promotion__date {
+    margin-left: 16px;
+    color: var(--black-light);
+    text-transform: uppercase;
+    @include to-desktop {
+        font-size: var(--font-size-large-mini);
+        margin-left: 25px;
+    }
+}
+.bl-promotion__type {
+    color: var(--color1);
+    text-transform: uppercase;
+    @include to-desktop {
+        font-size: var(--font-size-large-mini);
+    }
+}
+.bl-promotion__right .events .slide {
+    width: 310px;
+    margin-bottom: 25px;
+    @include from-desktop {
+        width: 360px;
+        margin-bottom: 32px;
+    }
+}
+.block-promo {
+    @include to-desktop {
+        display: none;
+    }
+}
+.block-promo .section__top {
+    display: none;
+}
+.bl-promotion__right .card-link {
+    width: 135px;
+    text-align: left;
+}
+.bl-promotion__right .card-link div {
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0;
+    text-transform: uppercase;
+    background: linear-gradient(251.97deg, #02c4f8 -9%, #1b5c9f 86.52%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all .3s ease;
+}
+.bl-promotion__right .card-link:hover div {
+    @include to-desktop {
+        letter-spacing: .8px;
+    }
+}

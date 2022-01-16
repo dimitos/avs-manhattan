@@ -1,0 +1,125 @@
+@import "../setup/initialize";
+
+.bl-contacts__title {
+    margin-bottom: 24px;
+    @include to-desktop {
+        margin-bottom: 40px;
+    }
+}
+.contacts__block {
+    @include to-desktop {
+        display: flex;
+    }
+}
+.contacts__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 24px 0;
+    border-bottom: 1px solid var(--black-light);
+    @include to-desktop {
+        width: 44%;
+        padding: 0 30px 0 0;
+        border-bottom: none;
+    }
+}
+.contacts__left-item + .contacts__left-item {
+    margin-top: 12px;
+    @include to-desktop {
+        margin-top: 20px;
+    }
+}
+.contacts__left-title {
+    margin-bottom: 8px;
+    opacity: .5;
+    @include to-desktop {
+        font-size: var(--font-size-large);
+        opacity: 1;
+    }
+}
+.contacts__right {
+    padding: 24px 0 0 0;
+    margin-bottom: -20px;
+    @include to-desktop {
+        width: 56%;
+        padding: 0;
+        margin: 0;
+    }
+}
+.contacts__right-item:nth-child(1) {
+    margin-bottom: 12px;
+    @include to-desktop {
+        margin-bottom: 0;
+        padding: 0 0 32px;
+        border-bottom: 2px solid var(--black-light);
+    }
+}
+.contacts__right-item:nth-child(2) {
+    margin-bottom: 24px;
+    @include to-desktop {
+        margin-bottom: 0;
+        padding: 32px 0;
+        border-bottom: 2px solid var(--black-light);
+    }
+}
+.contacts__right-item:nth-child(3) {
+    @include to-desktop {
+        padding: 32px 0 0;
+    }
+}
+.contacts__right-item {
+    @include to-desktop {
+        display: flex;
+        align-items: center;
+    }
+}
+.contacts__right-title {
+    margin-bottom: 4px;
+    opacity: .5;
+    @include to-desktop {
+        width: 192px;
+        margin-bottom: 0;
+        opacity: 1;
+    }
+}
+.contacts__right-text {
+    @include to-desktop {
+        font-weight: var(--font-weight-semi-bold);
+        font-size: var(--font-size-large);
+    }
+    @include from-desktop {
+        font-size: var(--font-size-huge);
+    }
+}
+.contacts__social {
+    width: 104px;
+}
+.contacts__social .social__link-icon {
+    fill: var(--black-light);
+    @include to-desktop {
+        fill: var(--black);
+    }
+}
+.contacts__social .social__item:hover .social__link-icon {
+    @include to-desktop {
+        fill: var(--color1);
+    }
+}
+.contacts__right-item:nth-child(3) .contacts__right-title {
+    display: none;
+    @include to-desktop {
+        display: block;
+    }
+}
+.contacts-map {
+    width: 100%;
+    height: 46.6vw;
+    min-height: 320px;
+    background: var(--color4);
+    @include from-desktop {
+        height: 540px;
+    }
+}
+#contacts-map {
+    height: 100%;
+}

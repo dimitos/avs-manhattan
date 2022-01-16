@@ -1,0 +1,56 @@
+@import "../setup/initialize";
+
+.bl-exclusive .section__top {
+    margin-bottom: 24px;
+    @include to-mobile {
+        margin-bottom: 35px;
+    }
+    @include to-desktop {
+        margin-bottom: 48px;
+    }
+}
+.exclusive.swiper {
+    overflow: initial;
+}
+.exclusive .slide {
+    width: 95%;
+    min-width: 268px;
+    @include to-desktop {
+        width: 80%;
+    }
+    @include from-desktop {
+        width: 72%;
+    }
+}
+.exclusive .card__wrapper {
+    height: 47.3vw;
+    min-height: 327px;
+    @include to-desktop {
+        height: 47.3vw;
+    }
+    @include from-desktop {
+        height: 541px;
+    }
+}
+.exclusive .card__title {
+    @include from-desktop {
+        font-size: var(--font-size-large-maxi);
+    }
+}
+.exclusive .card__inner {
+    @include to-desktop {
+        padding: 40px;
+    }
+}
+.exclusive .card__footer {
+    @include to-desktop {
+        bottom: 40px;
+        left: 40px;
+    }
+}
+.exclusive .card__link {
+    @include to-desktop {
+        top: 40px;
+        right: 40px;
+    }
+}

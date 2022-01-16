@@ -1,0 +1,49 @@
+@import "../setup/initialize";
+@import "../common/components/hero";
+@import "../common/components/bl-promo";
+
+.page__header_sale {
+    & .header__inner {
+        background: transparent;
+        box-shadow: none;
+    }
+    & .header__place {
+        display: none;
+    }
+    & .header__phone {
+        color: var(--white);
+    }
+    & .btn__default_main-black {
+        border-color: var(--color1);
+    }
+    & .btn__default_main-black .btn__text {
+        color: var(--white);
+    }
+    & .btn__default_main-black:hover {
+        background: var(--color2);
+        border-color: var(--color2);
+    }
+    & .header__wrapper {
+        border-bottom: 1px solid var(--white-light);
+    }
+    & .header__inner {
+        box-shadow: none;
+    }
+    & .header__btn {
+        border-left: 1px solid var(--white-light);
+        @include to-desktop {
+            border-left: 1px solid transparent;
+            border-right: 1px solid var(--white-light);
+        }
+    }
+    & .header__btn-line {
+        background: var(--white);
+    }
+    & .logo__text-caption,
+    & .logo__text-name {
+        fill: var(--white);
+    }
+    & .header__inner {
+        position: absolute;
+    }
+}

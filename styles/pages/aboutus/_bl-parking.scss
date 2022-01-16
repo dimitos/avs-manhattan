@@ -1,0 +1,140 @@
+.bl-parking__inner {
+    @include to-desktop {
+        display: flex;
+    }
+}
+.bl-parking__left {
+    margin-bottom: 24px;
+    @include to-desktop {
+        width: 56%;
+        margin-bottom: 0;
+    }
+}
+.parking-swiper {
+    position: relative;
+}
+.parking__wr {
+    height: 63vw;
+    min-height: 255px;
+    @include from-mobile {
+        height: 55vw;
+    }
+    @include to-desktop {
+        height: 43vw;
+    }
+    @include from-desktop {
+        height: 574px;
+    }
+}
+.parking-swiper .slider-nav {
+    display: none;
+    @include to-desktop {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 93%;
+        height: 35px;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        justify-content: space-between;
+        pointer-events: none;
+    }
+}
+.parking-swiper .slider-nav__btn  {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    pointer-events: initial;
+}
+.parking-swiper .link-page__icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--white-light);
+    transition: all .3s ease;
+}
+.parking-swiper .slider-nav__btn:hover .link-page__icon {
+    fill: var(--white);
+}
+.parking-swiper .slider-pagination {
+    position: absolute;
+    z-index: 5;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    pointer-events: none;
+    @include from-mobile {
+        bottom: 18px;
+    }
+    @include to-desktop {
+        bottom: 24px;
+    }
+    @include from-desktop {
+        bottom: 30px;
+    }
+}
+.parking-swiper .swiper-pagination-bullet {
+    background: var(--white);
+    opacity: .5;
+    transition: all .3s ease;
+    pointer-events: initial;
+}
+.parking-swiper .swiper-pagination-bullet:hover {
+    opacity: .8;
+}
+.parking-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+.parking-swiper .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 12px;
+}
+.bl-parking__right {
+    @include to-desktop {
+        width: 45%;
+        padding-left: 30px;
+    }
+    @include from-desktop {
+        padding-left: 56px;
+    }
+}
+.bl-parking__title {
+    max-width: 150px;
+    margin-bottom: 24px;
+    @include to-desktop {
+        max-width: 250px;
+    }
+}
+.bl-parking__text {
+    margin-bottom: 20px;
+    @include to-desktop {
+        margin-bottom: 24px;
+        max-width: 360px;
+    }
+}
+.bl-parking__wrapper {
+    @include to-desktop {
+        max-width: 340px;
+    }
+}
+.bl-parking__item {
+    padding: 12px 0;
+    border-top: 1px solid var(--black-light);
+    @include to-desktop {
+        padding: 16px 0;
+    }
+}
+.bl-parking__item:first-child {
+    padding: 0 0 12px 0;
+    border-top: none;
+    @include to-desktop {
+        padding: 16px 0;
+        border-top: 1px solid var(--black-light);
+    }
+}
+.bl-parking__item:last-child {
+    padding: 12px 0 0 0 ;
+    @include to-desktop {
+        padding: 16px 0;
+    }
+}
