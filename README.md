@@ -1,4 +1,5 @@
 # БЦ «Манхэттен»
+*[https://manhattan.intopweb.ru/](https://manhattan.intopweb.ru/ "БЦ «Манхэттен»")*
 
 ## Установка зависимостей
 
